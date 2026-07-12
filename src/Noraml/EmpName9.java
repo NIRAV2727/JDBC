@@ -14,7 +14,7 @@ public class EmpName9 {
 
             Statement statement = connection.createStatement();
 
-            ResultSet rs = statement.executeQuery("SELECT e_name FROM emp ");
+            ResultSet rs = statement.executeQuery("SELECT e_name FROM emp ORDER BY e_name ASC");
 
             while (rs.next()) {
                 System.out.println("Name        : " + rs.getString("e_name"));
