@@ -14,7 +14,7 @@ public class EmpDepartDply11 {
                     ""
             );
             System.out.printf("Enter Employee Name : ");
-            String name = sc.nextLine();
+            String name = sc.next();
             PreparedStatement prs = connection.prepareStatement("SELECT * FROM emp WHERE e_name=(?)");
             prs.setString(1,name);
             ResultSet rs = prs.executeQuery();
